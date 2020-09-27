@@ -1,0 +1,3823 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
+
+</head>
+<body>
+    <div id="test" class="chart-container" style="width:1200px; height:800px;"></div>
+    <script>
+        var chart_test = echarts.init(
+            document.getElementById('test'), 'white', {renderer: 'canvas'});
+        var option_test = {
+    "backgroundColor": "#a4b097",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#5b5b73",
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "effectScatter",
+            "name": "Cities",
+            "coordinateSystem": "geo",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 7,
+            "data": [
+                {
+                    "name": "Sydney",
+                    "value": [
+                        151.2099,
+                        -33.865143,
+                        0
+                    ]
+                },
+                {
+                    "name": "Canberra",
+                    "value": [
+                        149.128998,
+                        -35.282001,
+                        0
+                    ]
+                },
+                {
+                    "name": "Newcastle",
+                    "value": [
+                        151.75,
+                        -32.916668,
+                        0
+                    ]
+                },
+                {
+                    "name": "Broken Hill",
+                    "value": [
+                        141.467773,
+                        -31.956667,
+                        0
+                    ]
+                },
+                {
+                    "name": "Melbourne",
+                    "value": [
+                        144.946457,
+                        -37.840935,
+                        0
+                    ]
+                },
+                {
+                    "name": "Bendigo",
+                    "value": [
+                        144.278702,
+                        -36.757786,
+                        0
+                    ]
+                },
+                {
+                    "name": "Adelaide",
+                    "value": [
+                        138.503052,
+                        -34.846111,
+                        0
+                    ]
+                },
+                {
+                    "name": "Darwin",
+                    "value": [
+                        130.841782,
+                        -12.462827,
+                        0
+                    ]
+                },
+                {
+                    "name": "Alice Springs",
+                    "value": [
+                        133.882675,
+                        -23.700552,
+                        0
+                    ]
+                },
+                {
+                    "name": "Perth",
+                    "value": [
+                        115.857048,
+                        -31.953512,
+                        0
+                    ]
+                },
+                {
+                    "name": "Albany",
+                    "value": [
+                        117.881386,
+                        -35.022778,
+                        0
+                    ]
+                },
+                {
+                    "name": "Kalgoorlie",
+                    "value": [
+                        121.465836,
+                        -30.74889,
+                        0
+                    ]
+                },
+                {
+                    "name": "Broome",
+                    "value": [
+                        117.793221,
+                        -25.042261,
+                        0
+                    ]
+                },
+                {
+                    "name": "Launceston",
+                    "value": [
+                        147.157135,
+                        -41.429825,
+                        0
+                    ]
+                },
+                {
+                    "name": "Hobart",
+                    "value": [
+                        147.324997,
+                        -42.880554,
+                        0
+                    ]
+                },
+                {
+                    "name": "Brisbane",
+                    "value": [
+                        153.021072,
+                        -27.470125,
+                        0
+                    ]
+                },
+                {
+                    "name": "Mt Isa",
+                    "value": [
+                        139.497467,
+                        -20.724705,
+                        0
+                    ]
+                },
+                {
+                    "name": "Rockhampton",
+                    "value": [
+                        150.511673,
+                        -23.375,
+                        0
+                    ]
+                },
+                {
+                    "name": "Cairns",
+                    "value": [
+                        145.75412,
+                        -16.925491,
+                        0
+                    ]
+                },
+                {
+                    "name": "Pt Augusta",
+                    "value": [
+                        137.765839,
+                        -32.4925,
+                        0
+                    ]
+                }
+            ],
+            "label": {
+                "show": true,
+                "position": "right",
+                "color": "black",
+                "distance": 10,
+                "margin": 8,
+                "fontSize": 12,
+                "fontStyle": "bold",
+                "fontFamily": "monospace",
+                "formatter": "{b}"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b}<br>{c}",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 3,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Melbourne",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.8421052631578947,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: B<br> Engine Model: CF6-80E142<br> Price: 180",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 4,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Brisbane",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.6842105263157894,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-202<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 170",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 5,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Canberra",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            149.128998,
+                            -35.282001
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: B<br> Engine Model: CFM56-3B1<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 6,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Canberra->Sydney",
+                    "coords": [
+                        [
+                            149.128998,
+                            -35.282001
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: B<br> Engine Model: CFM-56-3<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 7,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Newcastle",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            151.75,
+                            -32.916668
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.4210526315789473,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: A<br> Engine Model: V2527-5A<br> Price: 90",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 8,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Newcastle->Sydney",
+                    "coords": [
+                        [
+                            151.75,
+                            -32.916668
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.4210526315789473,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: A<br> Engine Model: V2527-5A<br> Price: 90",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 9,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Broken Hill",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            141.467773,
+                            -31.956667
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.0526315789473686,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 130",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 10,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Broken Hill->Sydney",
+                    "coords": [
+                        [
+                            141.467773,
+                            -31.956667
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.0526315789473686,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 130",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 11,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Sydney",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.8421052631578947,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-243<br> Flight Class: C<br> Engine Model: 772B-60<br> Price: 180",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 12,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Canberra",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            149.128998,
+                            -35.282001
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.2105263157894735,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 140",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 13,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Canberra->Melbourne",
+                    "coords": [
+                        [
+                            149.128998,
+                            -35.282001
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.2105263157894735,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 140",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 14,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Adelaide",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            138.503052,
+                            -34.846111
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.763157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: A<br> Engine Model: CFM56-3B1<br> Price: 175",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 15,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Hobart",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            147.324997,
+                            -42.880554
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.0526315789473686,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: A<br> Engine Model: V2527-5A<br> Price: 130",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 16,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Bendigo",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            144.278702,
+                            -36.757786
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.1052631578947367,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B717-200<br> Flight Class: A<br> Engine Model: Unknown<br> Price: 70",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 17,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Bendigo->Melbourne",
+                    "coords": [
+                        [
+                            144.278702,
+                            -36.757786
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.1052631578947367,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B717-200<br> Flight Class: A<br> Engine Model: Unknown<br> Price: 70",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 18,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Melbourne->Launceston",
+                    "coords": [
+                        [
+                            144.946457,
+                            -37.840935
+                        ],
+                        [
+                            147.157135,
+                            -41.429825
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: A<br> Engine Model: CFM56-3B1<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 19,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Adelaide->Melbourne",
+                    "coords": [
+                        [
+                            138.503052,
+                            -34.846111
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.763157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: C<br> Engine Model: CFM56-3B1<br> Price: 175",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 20,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Adelaide->Broken Hill",
+                    "coords": [
+                        [
+                            138.503052,
+                            -34.846111
+                        ],
+                        [
+                            141.467773,
+                            -31.956667
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 21,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Broken Hill->Adelaide",
+                    "coords": [
+                        [
+                            141.467773,
+                            -31.956667
+                        ],
+                        [
+                            138.503052,
+                            -34.846111
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class D",
+            "coordinateSystem": "geo",
+            "zlevel": 22,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Adelaide->Perth",
+                    "coords": [
+                        [
+                            138.503052,
+                            -34.846111
+                        ],
+                        [
+                            115.857048,
+                            -31.953512
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.473684210526316,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#eb895f"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: D<br> Engine Model: CF6-80E142<br> Price: 220",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class D",
+            "coordinateSystem": "geo",
+            "zlevel": 23,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Adelaide->Darwin",
+                    "coords": [
+                        [
+                            138.503052,
+                            -34.846111
+                        ],
+                        [
+                            130.841782,
+                            -12.462827
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.6315789473684212,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#eb895f"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: D<br> Engine Model: CF6-80E142<br> Price: 230",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class D",
+            "coordinateSystem": "geo",
+            "zlevel": 24,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Darwin->Adelaide",
+                    "coords": [
+                        [
+                            130.841782,
+                            -12.462827
+                        ],
+                        [
+                            138.503052,
+                            -34.846111
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.6315789473684212,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#eb895f"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: D<br> Engine Model: CF6-80E142<br> Price: 230",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class E",
+            "coordinateSystem": "geo",
+            "zlevel": 25,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Darwin->Alice Springs",
+                    "coords": [
+                        [
+                            130.841782,
+                            -12.462827
+                        ],
+                        [
+                            133.882675,
+                            -23.700552
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#41a4ff"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: E<br> Engine Model: CFM-56-3<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class E",
+            "coordinateSystem": "geo",
+            "zlevel": 26,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Alice Springs->Darwin",
+                    "coords": [
+                        [
+                            133.882675,
+                            -23.700552
+                        ],
+                        [
+                            130.841782,
+                            -12.462827
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#41a4ff"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: E<br> Engine Model: CFM-56-3<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class D",
+            "coordinateSystem": "geo",
+            "zlevel": 27,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Perth->Adelaide",
+                    "coords": [
+                        [
+                            115.857048,
+                            -31.953512
+                        ],
+                        [
+                            138.503052,
+                            -34.846111
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.473684210526316,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#eb895f"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: D<br> Engine Model: CF6-80E142<br> Price: 220",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 28,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Perth->Albany",
+                    "coords": [
+                        [
+                            115.857048,
+                            -31.953512
+                        ],
+                        [
+                            117.881386,
+                            -35.022778
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 29,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Perth->Kalgoorlie",
+                    "coords": [
+                        [
+                            115.857048,
+                            -31.953512
+                        ],
+                        [
+                            121.465836,
+                            -30.74889
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.263157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 80",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 30,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Perth->Broome",
+                    "coords": [
+                        [
+                            115.857048,
+                            -31.953512
+                        ],
+                        [
+                            117.793221,
+                            -25.042261
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.4210526315789473,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 90",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 31,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Albany->Perth",
+                    "coords": [
+                        [
+                            117.881386,
+                            -35.022778
+                        ],
+                        [
+                            115.857048,
+                            -31.953512
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 32,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Kalgoorlie->Perth",
+                    "coords": [
+                        [
+                            121.465836,
+                            -30.74889
+                        ],
+                        [
+                            115.857048,
+                            -31.953512
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.263157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: C<br> Engine Model: V2527-5A<br> Price: 80",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 33,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Broome->Perth",
+                    "coords": [
+                        [
+                            117.793221,
+                            -25.042261
+                        ],
+                        [
+                            115.857048,
+                            -31.953512
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.4210526315789473,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: B<br> Engine Model: CFM-56-3<br> Price: 90",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 34,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Launceston->Melbourne",
+                    "coords": [
+                        [
+                            147.157135,
+                            -41.429825
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.5789473684210527,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: B<br> Engine Model: CFM-56-3<br> Price: 100",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 35,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Launceston->Hobart",
+                    "coords": [
+                        [
+                            147.157135,
+                            -41.429825
+                        ],
+                        [
+                            147.324997,
+                            -42.880554
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.263157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: B<br> Engine Model: V2527-5A<br> Price: 80",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 36,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Hobart->Melbourne",
+                    "coords": [
+                        [
+                            147.324997,
+                            -42.880554
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.0526315789473686,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: A<br> Engine Model: CFM56-3B1<br> Price: 130",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 37,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Hobart->Launceston",
+                    "coords": [
+                        [
+                            147.324997,
+                            -42.880554
+                        ],
+                        [
+                            147.157135,
+                            -41.429825
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.263157894736842,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: A<br> Engine Model: V2527-5A<br> Price: 80",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 38,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Brisbane->Sydney",
+                    "coords": [
+                        [
+                            153.021072,
+                            -27.470125
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.6842105263157894,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: B<br> Engine Model: CF6-80E142<br> Price: 170",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 39,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Brisbane->Mt Isa",
+                    "coords": [
+                        [
+                            153.021072,
+                            -27.470125
+                        ],
+                        [
+                            139.497467,
+                            -20.724705
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.6842105263157894,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: A<br> Engine Model: CFM56-3B1<br> Price: 170",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 40,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Brisbane->Rockhampton",
+                    "coords": [
+                        [
+                            153.021072,
+                            -27.470125
+                        ],
+                        [
+                            150.511673,
+                            -23.375
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.8421052631578947,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: A<br> Engine Model: CFM56-3B1<br> Price: 180",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 41,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Brisbane->Cairns",
+                    "coords": [
+                        [
+                            153.021072,
+                            -27.470125
+                        ],
+                        [
+                            145.75412,
+                            -16.925491
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.6315789473684212,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 230",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 42,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Brisbane->Darwin",
+                    "coords": [
+                        [
+                            153.021072,
+                            -27.470125
+                        ],
+                        [
+                            130.841782,
+                            -12.462827
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.789473684210526,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: B<br> Engine Model: CF6-80E142<br> Price: 240",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 43,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Mt Isa->Brisbane",
+                    "coords": [
+                        [
+                            139.497467,
+                            -20.724705
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.6842105263157894,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-202<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 170",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 44,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Rockhampton->Brisbane",
+                    "coords": [
+                        [
+                            150.511673,
+                            -23.375
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.8421052631578947,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-202<br> Flight Class: B<br> Engine Model: CF6-80E142<br> Price: 180",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 45,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Cairns->Brisbane",
+                    "coords": [
+                        [
+                            145.75412,
+                            -16.925491
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.6315789473684212,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 230",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 46,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Darwin->Brisbane",
+                    "coords": [
+                        [
+                            130.841782,
+                            -12.462827
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 3.789473684210526,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 240",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 47,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Mt Isa->Darwin",
+                    "coords": [
+                        [
+                            139.497467,
+                            -20.724705
+                        ],
+                        [
+                            130.841782,
+                            -12.462827
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: B<br> Engine Model: CFM56-3B1<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 48,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Darwin->Mt Isa",
+                    "coords": [
+                        [
+                            130.841782,
+                            -12.462827
+                        ],
+                        [
+                            139.497467,
+                            -20.724705
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: B<br> Engine Model: CFM56-3B1<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 49,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Adelaide->Pt Augusta",
+                    "coords": [
+                        [
+                            138.503052,
+                            -34.846111
+                        ],
+                        [
+                            137.765839,
+                            -32.4925
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 0.7894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B717-200<br> Flight Class: B<br> Engine Model: Unknown<br> Price: 50",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class C",
+            "coordinateSystem": "geo",
+            "zlevel": 50,
+            "progressive": 600,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Pt Augusta->Adelaide",
+                    "coords": [
+                        [
+                            137.765839,
+                            -32.4925
+                        ],
+                        [
+                            138.503052,
+                            -34.846111
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 0.7894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#9071ce"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B717-200<br> Flight Class: C<br> Engine Model: Unknown<br> Price: 50",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Cities",
+                "Flight class B",
+                "Flight class A",
+                "Flight class B",
+                "Flight class B",
+                "Flight class A",
+                "Flight class A",
+                "Flight class B",
+                "Flight class B",
+                "Flight class C",
+                "Flight class B",
+                "Flight class B",
+                "Flight class A",
+                "Flight class A",
+                "Flight class A",
+                "Flight class A",
+                "Flight class A",
+                "Flight class C",
+                "Flight class C",
+                "Flight class C",
+                "Flight class D",
+                "Flight class D",
+                "Flight class D",
+                "Flight class E",
+                "Flight class E",
+                "Flight class D",
+                "Flight class C",
+                "Flight class C",
+                "Flight class C",
+                "Flight class B",
+                "Flight class C",
+                "Flight class B",
+                "Flight class B",
+                "Flight class B",
+                "Flight class A",
+                "Flight class A",
+                "Flight class B",
+                "Flight class A",
+                "Flight class A",
+                "Flight class A",
+                "Flight class B",
+                "Flight class A",
+                "Flight class B",
+                "Flight class A",
+                "Flight class A",
+                "Flight class B",
+                "Flight class B",
+                "Flight class B",
+                "Flight class C"
+            ],
+            "selected": {
+                "Cities": true,
+                "Flight class B": true,
+                "Flight class A": true,
+                "Flight class C": true,
+                "Flight class D": true,
+                "Flight class E": true
+            },
+            "show": true,
+            "left": 10,
+            "bottom": 10,
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "geo": {
+        "map": "world",
+        "zoom": 5,
+        "center": [
+            134.577783,
+            -25.581685
+        ],
+        "roam": true,
+        "emphasis": {}
+    }
+};
+        chart_test.setOption(option_test);
+    </script>
+</body>
+</html>
