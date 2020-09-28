@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
+
+</head>
+<body>
+    <div id="test" class="chart-container" style="width:1000px; height:700px;"></div>
+    <script>
+        var chart_test = echarts.init(
+            document.getElementById('test'), 'white', {renderer: 'canvas'});
+        var option_test = {
+    "backgroundColor": "#a4b097",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#5b5b73",
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "effectScatter",
+            "name": "Cities",
+            "coordinateSystem": "geo",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 7,
+            "data": [
+                {
+                    "name": "Sydney",
+                    "value": [
+                        151.2099,
+                        -33.865143,
+                        0
+                    ]
+                },
+                {
+                    "name": "Canberra",
+                    "value": [
+                        149.128998,
+                        -35.282001,
+                        0
+                    ]
+                },
+                {
+                    "name": "Newcastle",
+                    "value": [
+                        151.75,
+                        -32.916668,
+                        0
+                    ]
+                },
+                {
+                    "name": "Broken Hill",
+                    "value": [
+                        141.467773,
+                        -31.956667,
+                        0
+                    ]
+                },
+                {
+                    "name": "Melbourne",
+                    "value": [
+                        144.946457,
+                        -37.840935,
+                        0
+                    ]
+                },
+                {
+                    "name": "Bendigo",
+                    "value": [
+                        144.278702,
+                        -36.757786,
+                        0
+                    ]
+                },
+                {
+                    "name": "Adelaide",
+                    "value": [
+                        138.503052,
+                        -34.846111,
+                        0
+                    ]
+                },
+                {
+                    "name": "Darwin",
+                    "value": [
+                        130.841782,
+                        -12.462827,
+                        0
+                    ]
+                },
+                {
+                    "name": "Alice Springs",
+                    "value": [
+                        133.882675,
+                        -23.700552,
+                        0
+                    ]
+                },
+                {
+                    "name": "Perth",
+                    "value": [
+                        115.857048,
+                        -31.953512,
+                        0
+                    ]
+                },
+                {
+                    "name": "Albany",
+                    "value": [
+                        117.881386,
+                        -35.022778,
+                        0
+                    ]
+                },
+                {
+                    "name": "Kalgoorlie",
+                    "value": [
+                        121.465836,
+                        -30.74889,
+                        0
+                    ]
+                },
+                {
+                    "name": "Broome",
+                    "value": [
+                        117.793221,
+                        -25.042261,
+                        0
+                    ]
+                },
+                {
+                    "name": "Launceston",
+                    "value": [
+                        147.157135,
+                        -41.429825,
+                        0
+                    ]
+                },
+                {
+                    "name": "Hobart",
+                    "value": [
+                        147.324997,
+                        -42.880554,
+                        0
+                    ]
+                },
+                {
+                    "name": "Brisbane",
+                    "value": [
+                        153.021072,
+                        -27.470125,
+                        0
+                    ]
+                },
+                {
+                    "name": "Mt Isa",
+                    "value": [
+                        139.497467,
+                        -20.724705,
+                        0
+                    ]
+                },
+                {
+                    "name": "Rockhampton",
+                    "value": [
+                        150.511673,
+                        -23.375,
+                        0
+                    ]
+                },
+                {
+                    "name": "Cairns",
+                    "value": [
+                        145.75412,
+                        -16.925491,
+                        0
+                    ]
+                },
+                {
+                    "name": "Pt Augusta",
+                    "value": [
+                        137.765839,
+                        -32.4925,
+                        0
+                    ]
+                }
+            ],
+            "label": {
+                "show": true,
+                "position": "right",
+                "color": "black",
+                "distance": 10,
+                "margin": 8,
+                "fontSize": 12,
+                "fontStyle": "bold",
+                "fontFamily": "monospace",
+                "formatter": "{b}"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b}<br>{c}",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 3,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4.0,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Melbourne",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            144.946457,
+                            -37.840935
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.8421052631578947,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-203<br> Flight Class: B<br> Engine Model: CF6-80E142<br> Price: 180",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 4,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 2.0,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Brisbane",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            153.021072,
+                            -27.470125
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 2.6842105263157894,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A330-202<br> Flight Class: A<br> Engine Model: CF6-80E142<br> Price: 170",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 5,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 1.3333333333333333,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Canberra",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            149.128998,
+                            -35.282001
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-3B7<br> Flight Class: B<br> Engine Model: CFM56-3B1<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class B",
+            "coordinateSystem": "geo",
+            "zlevel": 6,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 1.0,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Canberra->Sydney",
+                    "coords": [
+                        [
+                            149.128998,
+                            -35.282001
+                        ],
+                        [
+                            151.2099,
+                            -33.865143
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.894736842105263,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#5FFF38"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: B737-476<br> Flight Class: B<br> Engine Model: CFM-56-3<br> Price: 120",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Flight class A",
+            "coordinateSystem": "geo",
+            "zlevel": 7,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 0.8,
+                "color": "auto",
+                "symbol": "image://plane.png",
+                "symbolSize": 13,
+                "trailLength": 0
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 1,
+            "data": [
+                {
+                    "name": "Sydney->Newcastle",
+                    "coords": [
+                        [
+                            151.2099,
+                            -33.865143
+                        ],
+                        [
+                            151.75,
+                            -32.916668
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1.4210526315789473,
+                "opacity": 1,
+                "curveness": 0.18,
+                "type": "solid",
+                "color": "#de6a73"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{b} <br> Plane Model: A320-232<br> Flight Class: A<br> Engine Model: V2527-5A<br> Price: 90",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Cities",
+                "Flight class B",
+                "Flight class A",
+                "Flight class B",
+                "Flight class B",
+                "Flight class A"
+            ],
+            "selected": {
+                "Cities": true,
+                "Flight class B": true,
+                "Flight class A": true
+            },
+            "show": true,
+            "left": 10,
+            "bottom": 10,
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "geo": {
+        "map": "world",
+        "zoom": 5,
+        "center": [
+            134.577783,
+            -25.581685
+        ],
+        "roam": true,
+        "emphasis": {}
+    }
+};
+        chart_test.setOption(option_test);
+    </script>
+</body>
+</html>
